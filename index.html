@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102b49" />
+  <title>Tarushi Healthcare | Website Feedback</title>
+  <style>
+    :root { --navy:#102b49; --cyan:#5ec4e8; --ink:#203247; --muted:#617386; --line:#dce5ec; --bg:#f4f7fa; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 Arial, Helvetica, sans-serif; }
+    .wrap { width:min(900px, calc(100% - 28px)); margin:28px auto 56px; }
+    header { background:var(--navy); color:white; border-radius:18px; padding:30px 30px 26px; position:relative; overflow:hidden; }
+    header:after { content:""; position:absolute; width:230px; height:230px; border:34px solid rgba(94,196,232,.15); border-radius:50%; right:-80px; top:-100px; }
+    .brand { letter-spacing:2px; font-size:13px; font-weight:700; color:#bfeafa; }
+    h1 { font-size:clamp(27px,5vw,39px); line-height:1.12; margin:18px 0 10px; }
+    header p { max-width:660px; margin:0; color:#e4eef5; }
+    .tag { display:inline-block; margin-top:18px; padding:6px 11px; border:1px solid rgba(255,255,255,.35); border-radius:30px; color:#e9f8fd; font-size:12px; }
+    .intro, .section, .submit-card, .success { background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; margin-top:18px; }
+    .intro p { margin:6px 0; }
+    .small { color:var(--muted); font-size:13px; }
+    .section h2 { color:var(--navy); font-size:19px; margin:0 0 16px; }
+    .question { padding:16px 0; border-top:1px solid #edf1f4; }
+    .question:first-of-type { border-top:0; padding-top:0; }
+    label.qtitle { display:block; font-weight:700; margin-bottom:9px; }
+    .qnum { color:#1685ad; margin-right:7px; }
+    textarea, input[type="text"], input[type="email"] {
+      display:block; width:100%; border:1px solid #cbd7e0; border-radius:9px; padding:12px 13px;
+      font:inherit; color:var(--ink); background:#fff; outline:none;
+    }
+    textarea { min-height:92px; resize:vertical; }
+    textarea:focus, input:focus { border-color:#39a9d2; box-shadow:0 0 0 3px rgba(94,196,232,.18); }
+    .identity { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .field label { display:block; font-weight:700; margin-bottom:6px; font-size:14px; }
+    .ratings { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .rating { border:1px solid var(--line); border-radius:10px; padding:12px; }
+    .rating label { display:block; font-size:14px; font-weight:700; margin-bottom:8px; }
+    select { width:100%; border:1px solid #cbd7e0; border-radius:8px; padding:10px; background:white; font:inherit; }
+    .btn { border:0; border-radius:9px; padding:13px 20px; background:var(--navy); color:white; font-weight:700; font-size:15px; cursor:pointer; }
+    .btn:hover { background:#19446c; }
+    .btn:disabled { opacity:.6; cursor:wait; }
+    .submit-row { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .status { color:var(--muted); font-size:13px; }
+    .success { display:none; border-color:#9bd9b2; background:#f2fbf5; }
+    .success h2 { color:#176b39; margin-top:0; }
+    .error { color:#b42318; font-size:14px; margin-top:10px; }
+    footer { text-align:center; color:var(--muted); font-size:12px; padding:22px 8px; }
+    .hp { position:absolute; left:-5000px; }
+    @media (max-width:620px) { .wrap{margin:12px auto 32px} header{padding:24px 20px} .intro,.section,.submit-card,.success{padding:17px} .identity,.ratings{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">TARUSHI HEALTHCARE SERVICES</div>
+    <h1>Website Feedback Exercise</h1>
+    <p>Your perspective as a healthcare management student can help us improve our website, communicate our services more clearly and strengthen the support we offer to healthcare organisations.</p>
+    <span class="tag">PG MHM STUDENT EDITION</span>
+  </header>
+
+  <div class="intro">
+    <strong>Website to review:</strong> <a href="https://www.tarushihealthcare.com/" target="_blank" rel="noopener">www.tarushihealthcare.com</a>
+    <p>Please explore the Home, Services, About, Discovery and Insights sections before answering. Give honest, specific and constructive feedback. Where possible, suggest changes that Tarushi Healthcare could practically implement.</p>
+    <p class="small">Estimated time: 15–20 minutes. Name and email are optional. Your responses will be reviewed for website improvement.</p>
+  </div>
+
+  <div id="success" class="success" role="status">
+    <h2>Thank you for your feedback!</h2>
+    <p>Your responses have been submitted successfully. Your suggestions will be reviewed as part of Tarushi Healthcare's website improvement process.</p>
+  </div>
+
+  <form id="feedbackForm">
+    <div class="section">
+      <h2>Respondent details (optional)</h2>
+      <div class="identity">
+        <div class="field"><label for="studentName">Name</label><input id="studentName" name="studentName" type="text" maxlength="120" placeholder="Your name" /></div>
+        <div class="field"><label for="studentEmail">Email</label><input id="studentEmail" name="studentEmail" type="email" maxlength="160" placeholder="Your email address" /></div>
+      </div>
+      <div class="field" style="margin-top:14px"><label for="institution">Institution / programme</label><input id="institution" name="institution" type="text" value="Apollo Institute of Hospital Administration – PG MHM" maxlength="180" /></div>
+    </div>
+
+    <div class="section">
+      <h2>Section 1 – First impression and brand positioning</h2>
+      <div class="question"><label class="qtitle" for="q1"><span class="qnum">01.</span>After visiting the homepage, what is your understanding of Tarushi Healthcare and the services it offers?</label><textarea id="q1" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q2"><span class="qnum">02.</span>Is it immediately clear that Tarushi Healthcare provides consultancy and operational support to hospitals, clinics, diagnostic centres and pharmacies?</label><textarea id="q2" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q3"><span class="qnum">03.</span>How effectively does the website communicate Tarushi Healthcare as a professional healthcare consulting organisation?</label><textarea id="q3" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q4"><span class="qnum">04.</span>From the website, can you identify the type and size of healthcare organisations that Tarushi Healthcare intends to serve?</label><textarea id="q4" required></textarea></div>
+    </div>
+
+    <div class="section">
+      <h2>Section 2 – Services and healthcare management perspective</h2>
+      <div class="question"><label class="qtitle" for="q5"><span class="qnum">05.</span>The website presents five service categories – Plan, Improve, Validate, Optimise and Transform. Are these categories easy to understand? Do they cover the important requirements of healthcare organisations?</label><textarea id="q5" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q6"><span class="qnum">06.</span>As a PG MHM student, which of these five service categories do you think has the greatest relevance in today's healthcare industry? Why?</label><textarea id="q6" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q7"><span class="qnum">07.</span>After exploring the individual service pages, can you understand what Tarushi Healthcare would actually do for a hospital or healthcare organisation?</label><textarea id="q7" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q8"><span class="qnum">08.</span>Are there any important healthcare consulting services or management areas that you feel are missing from the website?</label><textarea id="q8" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q9"><span class="qnum">09.</span>Does the website demonstrate sufficient understanding of hospital administration, healthcare quality, NABH accreditation, financial management and operational efficiency?</label><textarea id="q9" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q10"><span class="qnum">10.</span>Are the reports, assessments, roadmaps and other outputs mentioned under the services sufficiently clear to help a prospective client understand what they will receive?</label><textarea id="q10" required></textarea></div>
+    </div>
+
+    <div class="section">
+      <h2>Section 3 – Website design, navigation and content</h2>
+      <div class="question"><label class="qtitle" for="q11"><span class="qnum">11.</span>Was it easy to navigate between Home, Services, About, Discovery and Insights? Did you find any difficulty locating information?</label><textarea id="q11" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q12"><span class="qnum">12.</span>Is the language professional, clear and easy to understand? Are there any sections that are too technical, confusing or unnecessarily lengthy?</label><textarea id="q12" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q13"><span class="qnum">13.</span>Do the photographs, graphics, colours, layout and overall presentation create the right impression of a healthcare consulting organisation?</label><textarea id="q13" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q14"><span class="qnum">14.</span>Does the team introduction, professional background, experience and client information establish confidence in the organisation?</label><textarea id="q14" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q15"><span class="qnum">15.</span>After reviewing the website, would you feel confident recommending Tarushi Healthcare to a hospital owner or healthcare entrepreneur? What influenced your decision?</label><textarea id="q15" required></textarea></div>
+    </div>
+
+    <div class="section">
+      <h2>Section 4 – Business development and user experience</h2>
+      <div class="question"><label class="qtitle" for="q16"><span class="qnum">16.</span>Imagine you are the administrator of a 100-bed hospital looking for operational improvement and NABH accreditation support. Would you consider contacting Tarushi Healthcare based on the information available on the website?</label><textarea id="q16" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q17"><span class="qnum">17.</span>Are the options to book a free discovery call and initiate contact sufficiently visible and convincing? Would you be comfortable using them?</label><textarea id="q17" required></textarea></div>
+      <div class="question"><label class="qtitle" for="q18"><span class="qnum">18.</span>Compared with other healthcare consulting websites you may have visited, what makes Tarushi Healthcare stand out? What could make it more competitive?</label><textarea id="q18" required></textarea></div>
+    </div>
+
+    <div class="section">
+      <h2>Section 5 – Overall assessment and recommendations</h2>
+      <div class="question">
+        <label class="qtitle"><span class="qnum">19.</span>On a scale of 1 to 10, how would you rate the website on each of the following parameters?</label>
+        <p class="small">1 = Very poor; 10 = Excellent</p>
+        <div class="ratings" id="ratings"></div>
+      </div>
+      <div class="question"><label class="qtitle" for="q20"><span class="qnum">20.</span>If you were part of the management team of Tarushi Healthcare, what are the top three changes or additions you would make to improve the website and attract more hospital clients?</label><textarea id="q20" required placeholder="Please list your three priority recommendations."></textarea></div>
+    </div>
+
+    <div class="submit-card">
+      <div class="hp"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <div class="submit-row">
+        <button class="btn" id="submitBtn" type="submit">Submit feedback</button>
+        <span class="status">Please complete all 20 questions before submitting.</span>
+      </div>
+      <div id="error" class="error" role="alert"></div>
+    </div>
+  </form>
+  <footer>Tarushi Healthcare Services · Website Feedback Exercise · <a href="https://www.tarushihealthcare.com/" target="_blank" rel="noopener">Visit our website</a></footer>
+</div>
+
+<script>
+  // Add your deployed Google Apps Script Web App URL here after completing the setup in README.md.
+  const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+  const ratingLabels = [
+    "Professional appearance",
+    "Clarity of services",
+    "Relevance to healthcare management",
+    "Ease of navigation",
+    "Credibility and trust",
+    "Overall effectiveness"
+  ];
+  const ratingsEl = document.getElementById("ratings");
+  ratingLabels.forEach((label, i) => {
+    const wrap = document.createElement("div");
+    wrap.className = "rating";
+    const id = "rating" + (i + 1);
+    wrap.innerHTML = `<label for="${id}">${label}</label><select id="${id}" required><option value="">Select rating</option>${Array.from({length:10},(_,n)=>`<option value="${n+1}">${n+1}</option>`).join("")}</select>`;
+    ratingsEl.appendChild(wrap);
+  });
+
+  const form = document.getElementById("feedbackForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const errorEl = document.getElementById("error");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    errorEl.textContent = "";
+    if (!form.reportValidity()) return;
+
+    if (GOOGLE_SCRIPT_URL.includes("PASTE_YOUR")) {
+      errorEl.textContent = "The feedback form has not been connected to its response spreadsheet yet. Please contact the organiser.";
+      return;
+    }
+
+    const data = {
+      studentName: document.getElementById("studentName").value.trim(),
+      studentEmail: document.getElementById("studentEmail").value.trim(),
+      institution: document.getElementById("institution").value.trim(),
+      responses: {}
+    };
+    for (let i = 1; i <= 18; i++) data.responses["Q" + i] = document.getElementById("q" + i).value.trim();
+    data.responses.Q19 = {};
+    ratingLabels.forEach((label, i) => data.responses.Q19[label] = document.getElementById("rating" + (i + 1)).value);
+    data.responses.Q20 = document.getElementById("q20").value.trim();
+    data.website = form.elements.website.value;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+    try {
+      // Apps Script accepts a simple POST; no custom headers are needed.
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(data)
+      });
+      form.style.display = "none";
+      document.getElementById("success").style.display = "block";
+      window.scrollTo({top:0, behavior:"smooth"});
+    } catch (err) {
+      errorEl.textContent = "We could not submit your response. Please check your internet connection and try again.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit feedback";
+    }
+  });
+</script>
+</body>
+</html>
